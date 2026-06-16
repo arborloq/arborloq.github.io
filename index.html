@@ -1,35 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- First VS Code edit -->
-  <title>Arborloq</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      display: flex;
-      height: 100vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3em;
-      letter-spacing: 2px;
-    }
-    p {
-      font-size: 1.2em;
-      opacity: 0.7;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carbon-Negative Building Systems</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+html { scroll-behavior: smooth; }
+body { background:#f6f9f6; font-family: system-ui, sans-serif; padding-top:70px; }
+.hero {
+  background: linear-gradient(rgba(27,94,32,0.9), rgba(27,94,32,0.8)),
+  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+  background-size: cover; color:white; padding:120px 20px;
+}
+.section { padding:60px 20px; }
+@media (min-width:768px) { .section { padding:80px 0; } }
+.green { color:#2e7d32; }
+.btn-green { background:#2e7d32; color:white; }
+.btn-green:hover { background:#1b5e20; }
+.fade-in { opacity:0; transform:translateY(20px); transition:all 0.6s ease-out; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+</style>
 </head>
 <body>
-  <div>
-    <h1>ARBORLOQ</h1>
-    <p>Engineered wood systems for modern construction</p>
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">Carbon System</a>
+    <div>
+      <a href="#system" class="text-white me-3">System</a>
+      <a href="#carbon" class="text-white me-3">Carbon</a>
+      <a href="#founder" class="text-white">Founder</a>
+    </div>
   </div>
+</nav>
+
+<section id="hero" class="hero text-center fade-in">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Carbon-Negative Materials Without the Green Premium</h1>
+    <p class="lead">We convert builder efficiency into carbon capture.</p>
+    <a href="#join" class="btn btn-green btn-lg mt-3">Join the Network</a>
+  </div>
+</section>
+
+<section class="section text-center fade-in">
+  <h2 class="green">Efficiency Funds Sustainability</h2>
+  <p>Builders don’t reject sustainability—they reject friction.</p>
+</section>
+
+<section id="carbon" class="section bg-dark text-white text-center fade-in">
+  <h2 class="text-success">Live Carbon Tracking</h2>
+  <div class="row mt-4">
+    <div class="col"><h1 id="carbonCounter">0</h1><p>kg CO₂ tracked</p></div>
+    <div class="col"><h1 id="toolsCounter">0</h1><p>tools</p></div>
+    <div class="col"><h1 id="offsetCounter">0</h1><p>kg offset</p></div>
+  </div>
+</section>
+
+<section id="system" class="section text-center fade-in">
+  <h2 class="green">Carbon Is Our Operating System</h2>
+  <div class="row mt-4">
+    <div class="col-md-4"><p>Capital drives carbon impact.</p></div>
+    <div class="col-md-4"><p>Return measured per dollar.</p></div>
+    <div class="col-md-4"><p>Time value of carbon matters.</p></div>
+  </div>
+</section>
+
+<section id="founder" class="section bg-white fade-in">
+  <div class="container">
+    <h2 class="text-center">Why This Exists</h2>
+    <p>After 25 years in energy, I’ve seen how real systems scale—and fail. This company aligns cost, performance, and carbon into one operating model.</p>
+  </div>
+</section>
+
+<section id="join" class="section text-center fade-in">
+  <h2>Join the Network</h2>
+
+  <div data-fs-success class="text-success mt-3">✅ You're in. We'll be in touch.</div>
+  <div data-fs-error class="text-danger mt-3"></div>
+
+  <form id="builder-form" class="mt-4">
+    <div class="row g-3 justify-content-center">
+
+      <div class="col-md-3">
+        <input type="text" name="name" class="form-control" placeholder="Name" required data-fs-field>
+      </div>
+
+      <div class="col-md-3">
+        <input type="email" name="email" class="form-control" placeholder="Email" required data-fs-field>
+      </div>
+
+      <div class="col-md-3">
+        <select name="role" class="form-control" data-fs-field required>
+          <option value="">Select Role</option>
+          <option>Builder / Contractor</option>
+          <option>Developer</option>
+          <option>Investor</option>
+          <option>Supplier / Manufacturer</option>
+          <option>Engineer / Architect</option>
+          <option>Aspiring Team Member</option>
+          <option>Collaborator / Partner</option>
+          <option>Research / Academic</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <textarea name="message" class="form-control" placeholder="What are you trying to solve or interested in?" rows="3" data-fs-field></textarea>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-green btn-lg" data-fs-submit-btn>Join the Network</button>
+      </div>
+
+    </div>
+  </form>
+</section>
+
+<script>
+let carbon=0, tools=5, offset=0;
+setInterval(()=>{
+ carbon+=0.2; offset+=0.1;
+ document.getElementById('carbonCounter').innerText=carbon.toFixed(1);
+ document.getElementById('toolsCounter').innerText=tools;
+ document.getElementById('offsetCounter').innerText=offset.toFixed(1);
+},1000);
+
+const observer = new IntersectionObserver(entries => {
+ entries.forEach(entry => {
+  if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+ });
+});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+
+window.formspree = window.formspree || function () {
+ (formspree.q = formspree.q || []).push(arguments);
+};
+formspree('initForm', { formElement: '#builder-form', formId: 'xeewdeav' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
 </body>
 </html>
