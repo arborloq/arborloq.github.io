@@ -1,262 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArborLoq | Next Generation Building Products</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-html{scroll-behavior:smooth}
-body{font-family:system-ui,sans-serif;background:#4f8a58;color:#2f3437;padding-top:72px}
-.navbar{background:#4f8a58e8;backdrop-filter:blur(8px)}
-.navbar-brand,.nav-link{color:#fff!important;font-weight:600}
-.hero{min-height:85vh;display:flex;align-items:center;background:url('assets/img/hero.jpg');background-size:cover;background-position:center}
-.hero-panel{background:rgba(255,255,255,.82);padding:2rem;border-radius:24px;box-shadow:0 10px 25px rgba(0,0,0,.15)}
-.section{padding:90px 0}
-.section-alt{background:#ffffff}
-.card{border:none;border-radius:20px;background:#fff;color:#2f3437;box-shadow:0 8px 24px rgba(0,0,0,.12);height:100%}
-.accent{color:#fff}
-footer{background:#fff;color:#2f3437;padding:30px 0}
-.reveal{opacity:0;transform:scale(.95) translateY(30px);transition:all .8s ease}
-.reveal.visible{opacity:1;transform:scale(1) translateY(0)}
-.loop{position:relative;width:320px;height:320px;margin:20px auto;border:4px solid #4f8a58;border-radius:50%}
-.loop div{position:absolute;background:#fff;padding:8px 12px;border-radius:12px;font-size:.85rem;font-weight:600}
- .a{top:-10px;left:35%}.b{top:22%;right:-20px}.c{bottom:22%;right:-25px}.d{bottom:-10px;left:35%}.e{bottom:22%;left:-25px}.f{top:22%;left:-20px}
- .arrow{position:absolute;inset:8px;border:2px dashed #4f8a58;border-radius:50%}
-@media(max-width:768px){.section{padding:60px 20px}.loop{width:260px;height:260px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArborLoq | Next-Generation Engineered Wood Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: #4f8a58;
+            color: #2f3437;
+            padding-top: 72px;
+        }
+
+        .navbar {
+            background: rgba(79, 138, 88, 0.95);
+            backdrop-filter: blur(8px);
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 600;
+        }
+
+        .arbor {
+            color: #ffffff;
+        }
+
+        .loq {
+            color: #d7c0a0;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: url('assets/img/hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-panel {
+            background: rgba(255, 255, 255, 0.88);
+            padding: 2rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-alt {
+            background: #ffffff;
+        }
+
+        .accent {
+            color: #ffffff;
+        }
+
+        footer {
+            background: #ffffff;
+            color: #2f3437;
+            padding: 30px 0;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all .8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media(max-width:768px) {
+            .section {
+                padding: 60px 20px;
+            }
+        }
+
+
+        .btn-arbor {
+            background-color: #4f8a58;
+            border-color: #4f8a58;
+            color: white;
+        }
+
+        .btn-arbor:hover {
+            background-color: #43784b;
+            border-color: #43784b;
+            color: white;
+        }
+
+        .btn-arbor:focus,
+        .btn-arbor:active {
+            background-color: #43784b;
+            border-color: #43784b;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-<div class="container"><a class="navbar-brand" href="#hero">ArborLoq</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
-<div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-<li class="nav-item"><a class="nav-link" href="#approach">Approach</a></li>
-<li class="nav-item"><a class="nav-link" href="#founder">Founder</a></li>
-<li class="nav-item"><a class="nav-link" href="#join">Join</a></li></ul></div></div></nav>
 
-<section id="hero" class="hero">
-<div class="container"><div class="hero-panel text-center reveal">
-<h1 class="display-4 fw-bold">Building the Next Generation of Engineered Wood Products</h1>
-<p class="lead">ArborLoq transforms underutilized wood resources and emerging biomass streams into advanced building materials for residential and light commercial construction.</p>
-<a href="#products" class="btn btn-success btn-lg me-2">Explore Our Vision</a>
-<a href="#join" class="btn btn-outline-success btn-lg">Join the Network</a>
-</div></div></section>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <span class="arbor">Arbor</span><span class="loq">Loq</span>
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#approach">Approach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#founder">Founder</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#join">Join</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<section class="section reveal"><div class="container text-center">
-<h2 class="accent">Unlocking Value from Underutilized Resources</h2>
-<p class="fs-5 text-white">Millions of tons of wood fiber are burned, mulched or converted to short life paper products every year. ArborLoq is exploring ways to transform those resources into durable, high-performance building products.</p>
-</div></section>
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-panel text-center reveal">
+                <h1 class="display-4 fw-bold">Building the Next Generation of Engineered Wood Products</h1>
+                <p class="lead mt-2 mb-0">ArborLoq is developing advanced building materials for residential and light
+                    commercial construction.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="products" class="section section-alt reveal"><div class="container">
-<h2 class="text-center mb-5">What We're Building</h2>
-<div class="row g-4 justify-content-center">
-<div class="col-md-5"><div class="card p-4"><h4>Engineered Wood Products</h4><p>Structural members, panelized products, and other engineered solutions as green alternatives to conventional materials.</p></div></div>
-<div class="col-md-5"><div class="card p-4"><h4>Future Materials</h4><p>Next-generation building materials enabled by novel biomass streams, advanced manufacturing, digital design tools, automation, and continuous product iteration.</p></div></div>
-</div></div></section>
+    <section class="section reveal">
+        <div class="container text-center">
+            <h2 class="accent mb-4">Current Focus</h2>
+            <p class="text-white fs-5">ArborLoq is in early-stage product development, evaluating feedstock pathways,
+                manufacturing approaches, and prototype designs for next-generation engineered wood products.</p>
+        </div>
+    </section>
 
-<section id="approach" class="section reveal"><div class="container">
-<h2 class="text-center accent mb-5">Performance First</h2>
-<div class="row g-4">
-<div class="col-md-4"><div class="card p-4"><h4>Better Materials</h4><p>Products that aim to outperform conventional alternatives.</p></div></div>
-<div class="col-md-4"><div class="card p-4"><h4>Better Manufacturing</h4><p>Adaptable production systems using local and underutilized resources.</p></div></div>
-<div class="col-md-4"><div class="card p-4"><h4>Better Economics</h4><p>Creating value where others see waste streams and stranded resources.</p></div></div>
-</div></div></section>
+    <section id="products" class="section section-alt reveal">
+        <div class="container">
+            <h2 class="text-center mb-4">Turning Underutilized Wood Fiber into Structural Building Products</h2>
+            <p class="fs-5 text-center">ArborLoq is exploring how underutilized wood fiber and novel biomass streams can
+                be converted into consistent, high-performance structural building materials using modern engineering
+                and manufacturing approaches.</p>
+        </div>
+    </section>
 
-<section class="section section-alt reveal">
-  <div class="container text-center">
+    <section class="section reveal">
+        <div class="container">
+            <h2 class="text-center accent mb-5">What We’re Building</h2>
+            <h4 class="text-white">Engineered Wood Products</h4>
+            <p class="text-white">ArborLoq is developing engineered wood products designed to compete with dimensional
+                lumber and conventional engineered wood systems, with emphasis on consistency, structural performance,
+                and scalable manufacturing.</p>
+            <h4 class="text-white mt-4">What We’re Exploring</h4>
+            <ul class="text-white">
+                <li>Structural products derived from stranded wood and novel biomass streams</li>
+                <li>Manufacturing approaches compatible with automation and regional feedstock availability</li>
+                <li>Digital design and simulation workflows to accelerate iteration and reduce risk</li>
+            </ul>
+        </div>
+    </section>
 
-    <h2 class="mb-4">Built With Builders</h2>
+    <section id="approach" class="section section-alt reveal">
+        <div class="container">
+            <h2 class="text-center mb-5">Performance First</h2>
+            <p class="fs-5">ArborLoq is currently:</p>
+            <ul>
+                <li>Evaluating three feedstock pathways for engineered wood products</li>
+                <li>Developing early-stage digital material and process models</li>
+                <li>Engaging builders to identify high-friction construction use cases</li>
+            </ul>
+        </div>
+    </section>
 
-    <p class="lead mb-5">
-      Every ArborLoq product begins with field insight and returns to the field
-      for validation. The system continuously learns, adapts, and improves.
-    </p>
+    <section id="founder" class="section reveal">
+        <div class="container">
+            <h2 class="text-center accent mb-4">Founder</h2>
+            <p class="text-white">ArborLoq was founded by Chad Yates, an engineer with more than 25 years of experience
+                working across complex industrial systems where performance, economics, and real-world constraints
+                matter.</p>
+            <p class="text-white">His career spans offshore energy, advanced manufacturing, and carbon removal, using
+                digital tools to understand complex systems and improve their performance.</p>
+            <p class="text-white">From simulation-driven offshore technologies and machine learning-powered decision
+                support to advanced metal additive manufacturing and direct air carbon capture, the common thread has
+                been applying emerging tools to solve hard industrial problems.</p>
+            <p class="text-white">Across these domains, a consistent pattern emerged: the hardest problems are rarely
+                solved by better components alone, but by better systems designed for reality.</p>
+            <p class="text-white">ArborLoq applies that same systems-driven mindset to building materials.</p>
+            <p class="text-white">ArborLoq believes that better systems create better outcomes, and that environmental
+                benefits should follow from disciplined engineering and execution, not compromise.</p>
+        </div>
+    </section>
 
-    <svg
-    viewBox="0 0 800 800"
-    width="100%"
-    style="max-width:700px;height:auto;"
->
+    <section id="join" class="section section-alt reveal">
+        <div class="container">
 
-    <!-- Outer Ring -->
+            <h2 class="text-center mb-4">Join the Network</h2>
 
-    <circle
-        cx="400"
-        cy="400"
-        r="290"
-        fill="none"
-        stroke="#4f8a58"
-        stroke-width="10"
-    />
+            <ul class="list-unstyled">
 
-    <!-- Center Hub -->
+                <li class="mb-3">
+                    <span class="fw-semibold">Builders & Contractors:</span>
+                    Become an early product advisor
+                </li>
 
-    <circle
-        cx="400"
-        cy="400"
-        r="120"
-        fill="#4f8a58"
-    />
+                <li class="mb-3">
+                    <span class="fw-semibold">Manufacturers:</span>
+                    Explore manufacturing and process partnerships
+                </li>
 
-    <text
-        x="400"
-        y="390"
-        text-anchor="middle"
-        fill="white"
-        font-size="30"
-        font-weight="700"
-    >
-        ArborLoq
-    </text>
+                <li class="mb-3">
+                    <span class="fw-bold">Suppliers:</span>
+                    Discuss feedstock opportunities
+                </li>
 
-    <text
-        x="400"
-        y="430"
-        text-anchor="middle"
-        fill="white"
-        font-size="22"
-    >
-        Continuous
-    </text>
+                <li class="mb-3">
+                    <span class="fw-bold">Investors:</span>
+                    Request background materials and early discussions
+                </li>
 
-    <text
-        x="400"
-        y="455"
-        text-anchor="middle"
-        fill="white"
-        font-size="22"
-    >
-        Improvement
-    </text>
+                <li class="mb-3">
+                    <span class="fw-bold">Engineers & Researchers:</span>
+                    Collaborate on modeling and testing
+                </li>
 
-    <!-- 12 o'clock -->
+                <li class="mb-3">
+                    <span class="fw-bold">Strategic Partners:</span>
+                    Explore potential collaboration opportunities
+                </li>
 
-    <circle cx="400" cy="110" r="55" fill="white" />
-    <text x="400" y="103" text-anchor="middle" font-size="20" font-weight="700">
-        Builder
-    </text>
-    <text x="400" y="123" text-anchor="middle" font-size="20">
-        Insight
-    </text>
+            </ul>
 
-    <!-- 2 o'clock -->
+            <div data-fs-success class="text-success text-center mb-3"></div>
+            <div data-fs-error class="text-danger text-center mb-3"></div>
 
-    <circle cx="651" cy="255" r="55" fill="white" />
-    <text x="651" y="248" text-anchor="middle" font-size="20" font-weight="700">
-        Product
-    </text>
-    <text x="651" y="268" text-anchor="middle" font-size="20">
-        Concept
-    </text>
+            <form id="network-form">
+                <div class="row g-3 justify-content-center">
 
-    <!-- 4 o'clock -->
+                    <div class="col-md-4">
+                        <input class="form-control" name="name" placeholder="Name" data-fs-field required>
+                    </div>
 
-    <circle cx="651" cy="545" r="55" fill="white" />
-    <text x="651" y="550" text-anchor="middle" font-size="20" font-weight="700">
-        Engineering
-    </text>
+                    <div class="col-md-4">
+                        <input type="email" class="form-control" name="email" placeholder="Email" data-fs-field
+                            required>
+                    </div>
 
-    <!-- 6 o'clock -->
+                    <div class="col-md-4">
+                        <select class="form-select" name="role" data-fs-field required>
+                            <option value="">Select Role</option>
+                            <option>Builder / Contractor</option>
+                            <option>Developer</option>
+                            <option>Architect</option>
+                            <option>Engineer</option>
+                            <option>Manufacturer</option>
+                            <option>Supplier</option>
+                            <option>Investor</option>
+                            <option>Strategic Partner</option>
+                            <option>Researcher</option>
+                            <option>Prospective Team Member</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
 
-    <circle cx="400" cy="690" r="55" fill="white" />
-    <text x="400" y="695" text-anchor="middle" font-size="20" font-weight="700">
-        Prototype
-    </text>
+                    <div class="col-md-4">
+                        <input class="form-control" name="location" placeholder="Location">
+                    </div>
 
-    <!-- 8 o'clock -->
+                    <div class="col-md-8">
+                        <textarea class="form-control" name="message" rows="4"
+                            placeholder="What are you interested in?"></textarea>
+                    </div>
 
-    <circle cx="149" cy="545" r="55" fill="white" />
-    <text x="149" y="550" text-anchor="middle" font-size="20" font-weight="700">
-        Production
-    </text>
+                    <div class="col-12 text-center">
+                        <button class="btn btn-arbor btn-lg" data-fs-submit-btn>
+                            Join the Network
+                        </button>
+                    </div>
 
-    <!-- 10 o'clock -->
+                </div>
+            </form>
 
-    <circle cx="149" cy="255" r="55" fill="white" />
-    <text x="149" y="248" text-anchor="middle" font-size="20" font-weight="700">
-        Field
-    </text>
-    <text x="149" y="268" text-anchor="middle" font-size="20">
-        Validation
-    </text>
+        </div>
+    </section>
 
-</svg>    
+    <footer class="text-center">
+        <p>© ArborLoq. Engineered wood for next-generation building systems.</p>
+    </footer>
 
-  </div>
-</section>
+    <script>
+        window.formspree = window.formspree || function () {
+            (formspree.q = formspree.q || []).push(arguments);
+        };
 
-<section class="section reveal"><div class="container text-center">
-<h2 class="accent">Carbon as an Engineering Constraint</h2>
-<p class="text-white fs-5">We use carbon accounting as an operating tool alongside performance, manufacturing, and economics. Better products come first; lifecycle improvements follow.</p>
-</div></section>
+        formspree('initForm', {
+            formElement: '#network-form',
+            formId: 'xeewdeav'
+        });
+    </script>
 
-<section id="founder" class="section section-alt reveal"><div class="container">
-<h2 class="text-center mb-4">Why an Energy Industry Veteran is Building ArborLoq</h2>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
-<p>
-Throughout my career, I've been drawn to difficult engineering problems.
-</p>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-<p>
-Over the last 25 years, I've worked across offshore drilling and production,
-modeling and simulation, supply chain analytics, advanced manufacturing, and
-most recently direct air carbon capture. The common thread has been learning new digital
-tools and applying them to complex industrial challenges.
-</p>
-
-<p>
-From developing technologies from concept to deployment, to building cost
-models, process simulations, and digital workflows, I've seen that successful
-innovation rarely comes from technology alone. The best solutions solve real
-problems, fit within existing workflows, and create value for the people who
-use them.
-</p>
-
-<p>
-That's the idea behind ArborLoq.
-</p>
-
-<p>
-We're exploring how advanced manufacturing, digital tools, material science,
-and continuous feedback from builders can be combined to create a new
-generation of engineered wood products. Products that compete on performance,
-practicality, and economics first.
-</p>
-
-<p>
-I didn't start ArborLoq because I wanted to build a sustainability company.
-I started it because I believe better systems create better outcomes.
-</p>
-
-<p>
-If we can build products that outperform today's alternatives while making
-better use of the resources around us, the environmental benefits become a
-result of good engineering—not a tradeoff.
-</p>
-
-<p>
-That's the future we're working toward.
-</p>
-</div></section>
-
-<section id="join" class="section reveal"><div class="container">
-<h2 class="text-center accent mb-4">Help Build What's Next</h2>
-<form id="network-form"><div class="row g-3 justify-content-center">
-<div class="col-md-4"><input class="form-control" name="name" placeholder="Name" required></div>
-<div class="col-md-4"><input type="email" class="form-control" name="email" placeholder="Email" required></div>
-<div class="col-md-4"><select class="form-select" name="role"><option>Select Role</option><option>Builder / Contractor</option><option>Developer</option><option>Architect</option><option>Engineer</option><option>Manufacturer</option><option>Supplier</option><option>Investor</option><option>Strategic Partner</option><option>Prospective Team Member</option><option>Other</option></select></div>
-<div class="col-md-4"><input class="form-control" name="location" placeholder="Location"></div>
-<div class="col-md-8"><textarea class="form-control" rows="4" name="message" placeholder="What are you interested in?"></textarea></div>
-<div class="col-12 text-center"><button class="btn btn-light btn-lg">Join the Network</button></div>
-</div></form></div></section>
-<footer><div class="container text-center">© 2026 ArborLoq</div></footer>
-<script>
-const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-window.formspree=window.formspree||function(){(formspree.q=formspree.q||[]).push(arguments)};
-formspree('initForm',{formElement:'#network-form',formId:'xeewdeav'});
-</script>
-<script src='https://unpkg.com/@formspree/ajax@1' defer></script>
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
-</body></html>
+</html>
